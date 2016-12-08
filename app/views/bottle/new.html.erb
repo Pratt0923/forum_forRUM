@@ -1,0 +1,18 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <%= form_for :bottle, url: bottle_index_path, method: :post do |f| %>
+      <%= f.label :title %>
+      <%= f.text_field :title, value: "" %>
+
+      <%= f.label :contents %>
+      <%= f.text_field :contents %>
+
+      <%= f.submit 'Add a bottle to the collection!'%>
+    <% end %>
+  </body>
+</html>

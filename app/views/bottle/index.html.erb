@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <meta charset="utf-8">
+  <title></title>
+</head>
+<body>
+  <% @all_bottles.each do |f| %>
+
+  <div class="panel panel-default">
+    <div class="panel-body">
+      <%= f.title %>
+    </div>
+    <div class="panel-footer"> <%= f.contents %>
+      <p>
+        Created by <%= User.find(f.user_id).email %>
+      </p>
+
+      <!-- here we want to add expandable comments so that users can click on teh post
+      and see comments of the post but we want ot do it in JS so that it is easy and
+      on one page yay -->
+    </div>
+  </div>
+
+  <% end %>
+  <%= link_to "new bottle", new_bottle_path %>
+</body>
+</html>

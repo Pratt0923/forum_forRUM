@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+    <% @bottles.each do |f| %>
+
+    <div class="panel panel-default">
+      <div class="panel-body">
+        <%= f.title %>
+      </div>
+      <div class="panel-footer"> <%= f.contents %>
+        
+      </div>
+    </div>
+
+    <% end %>
+    <%= link_to "new bottle", new_bottle_path %>
+  </body>
+</html>
